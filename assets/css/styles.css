@@ -1,0 +1,293 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Change font for all <p> elements */
+p {
+  font-family: 'Times New Roman', Times, serif; /* Fallbacks to ensure compatibility */
+  font-size: 16px; /* Adjust the size */
+  font-weight: normal; /* Change the weight */
+  line-height: 1.5; /* Adjust line height */
+  color: #333; /* Change the text color */
+  margin: 10px 0; /* Add margin */
+  padding-bottom: 10px;
+}
+
+/*
+   HEADER
+*/
+
+/* Sticky Header Styles */
+header {
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Align it to the top of the viewport */
+    left: 0; /* Align it to the left */
+    right: 0; /* Align it to the right */
+    background-color: #ffffff; /* Background color */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    transition: top 0.1s; /* Smooth transition for hiding/showing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for depth */
+    justify-content: space-between; /* Spread logo and nav items to left and right */
+    align-items: center; /* Vertically align items */
+}
+
+/* Optional: Add some styling for a shadow effect when the header is visible */
+header.visible {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for depth */
+}
+
+/* Logo Styling */
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Navigation Bar Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center; /* Ensures the nav items and button align vertically */
+}
+
+/* Navigation Links Styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-left: 10px;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(139, 98, 58); /* Change to desired color */
+    font-weight: bold;
+    font-size: 16px; /* Change size as needed */
+    font-family: 'Verdana', sans-serif;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s; /* Smooth background color change on hover */
+}
+
+.nav-links a:hover {
+  background-color: rgba(54, 54, 54, 0.17); /* Slightly darker on hover */
+}
+
+
+/* Contact Button Styling */
+.email-button {
+  position: absolute; /* Make it absolutely positioned */
+  top: 10px; /* Align it near the top of the header */
+  right: 25px; /* Align it near the right edge */
+}
+
+.email-button a {
+  /*background-color: #f6a623;*/
+  color: rgb(139, 98, 58); /* Text color */
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.email-button a:hover {
+  background-color: rgba(54, 54, 54, 0.17); /* Slightly darker on hover */
+}
+
+
+/* Main content area */
+main {
+  flex: 1; /* Allow the main content area to grow */
+  margin-top: 100px;
+
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  padding: 0 20px;
+  margin-top: 150px;
+}
+
+
+/* Two-Column Layout Styling */
+.two-column-container {
+    display: flex;
+    height: 200px; /* Set the height of the container */
+    margin-top: 20px; /* Add space above the container */
+}
+
+.left-column {
+    flex: 1; /* Takes up equal space */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.right-column {
+    flex: 1; /* Takes up equal space */
+    flex-direction: column;
+    padding: 10px; /* Add some padding around the text */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+}
+
+/* Responsive Image */
+.responsive-image {
+    max-width: 100%; /* Make sure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Button Styling */
+.styled-button {
+    background-color: rgba(139, 98, 58); /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 10px 20px; /* Space around the text */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth background color change on hover */
+}
+
+.styled-button:hover {
+    background-color: rgb(54, 54, 54); /* Change background color on hover */
+}
+
+
+/* Modal Styles */
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1000; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-image: url('../images/logo.png'); /* Add your background image */
+  background-size: cover; /* Cover the entire modal */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 2% auto; /* Centered */
+  padding: 20px;
+  border: 1px solid #888; /* Remove border */
+  border-radius: 10px; /* Optional: add border radius for rounded corners */
+  width: 90%; /* Width can vary based on screen size */
+  height: 90%; /* Height will adjust based on content */
+  overflow: hidden; /* Enable scroll if needed */
+  display: flex; /* Use flexbox to center content */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Close Button */
+.close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+
+footer {
+    background-color: #f1f1f1; /* Light gray background */
+    padding: 20px; /* Space around the content */
+    text-align: center; /* Center the text */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center; /* Center logo and text vertically */
+}
+
+.footer-logo img {
+    margin-right: 10px; /* Space between logo and name */
+}
+
+.footer p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+
+/*
+    Team Cards
+*/
+
+.team-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 250px;
+  height: 350px;
+  text-align: center;
+  margin: 10px;
+  display: inline-block;
+}
+
+.team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.team-card h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.team-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+/*
+CONTACT BOX
+*/
+/* turn this into a box that stacks the items vertically*/
+.contact-box {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 20px;
+    border: 1px solid #ccc; /* Border around the box */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    margin: 20px 0; /* Space above and below */
+}
