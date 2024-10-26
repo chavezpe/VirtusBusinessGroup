@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in total width */
+}
+
+/* Profile Container Styles */
+.profile-container {
+    display: flex; /* Use flexbox layout */
+    padding: 5%; /* Padding around the container */
+}
+
+/* Column Styles */
+.column {
+    padding: 10px; /* Padding within each column */
+    /*border: 1px solid #ccc; !* Border around each column *!*/
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Left Column */
+.left-column-teams {
+    width: 20%; /* Set left column width */
+    display: flex; /* Ensure content is vertically stacked */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+/* Text within the left column */
+.left-column-teams h3,
+.left-column-teams h4,
+.left-column-teams p {
+    width: 100%; /* Ensure the text takes up full width of the column */
+    text-align: center; /* Center the text inside the column */
+    word-wrap: break-word; /* Ensure long words break to fit within the column */
+    margin-bottom: 10px; /* Add space between elements */
+}
+
+
+/* Right Column */
+.right-column-teams {
+    width: 70%; /* Set right column width */
+}
+
+/* Image Styles */
+#profile-image {
+    max-width: 100%; /* Ensure the image doesn't exceed the column width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image fits within the container */
+    margin-bottom: 10px; /* Space below the image */
+}
+
