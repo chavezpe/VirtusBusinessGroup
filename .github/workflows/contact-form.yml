@@ -1,0 +1,45 @@
+name: Save Contact Form Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      firstName:
+        description: 'First name of the user'
+        required: true
+      lastName:
+        description: 'Last name of the user'
+        required: true
+      email:
+        description: 'Email of the user'
+        required: true
+      message:
+        description: 'Message from the user'
+        required: true
+
+jobs:
+  save_data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Ensure CSV file exists with headers
+        run: |
+          if [ ! -f contact_requests.csv ]; then
+            echo "firstName,lastName,email,message" > contact_requests.csv
+          fi
+
+      - name: Append form data to CSV
+        run: |
+          echo "${{ github.event.inputs.firstName }},${{ github.event.inputs.lastName }},${{ github.event.inputs.email }},${{ github.event.inputs.message }}" >> contact_requests.csv
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add contact_requests.csv
+          git commit -m "Add new form submission"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
