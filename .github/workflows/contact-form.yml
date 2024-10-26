@@ -1,20 +1,8 @@
 name: Save Contact Form Data
 
 on:
-  workflow_dispatch:
-    inputs:
-      firstName:
-        description: 'First name of the user'
-        required: true
-      lastName:
-        description: 'Last name of the user'
-        required: true
-      email:
-        description: 'Email of the user'
-        required: true
-      message:
-        description: 'Message from the user'
-        required: true
+  repository_dispatch:
+    types: [form_submission]
 
 jobs:
   save_data:
@@ -32,7 +20,7 @@ jobs:
 
       - name: Append form data to CSV
         run: |
-          echo "${{ github.event.inputs.firstName }},${{ github.event.inputs.lastName }},${{ github.event.inputs.email }},${{ github.event.inputs.message }}" >> contact_requests.csv
+          echo "${{ github.event.client_payload.firstName }},${{ github.event.client_payload.lastName }},${{ github.event.client_payload.email }},${{ github.event.client_payload.message }}" >> contact_requests.csv
 
       - name: Commit and push changes
         run: |
@@ -42,4 +30,4 @@ jobs:
           git commit -m "Add new form submission"
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GT_TOKEN }}

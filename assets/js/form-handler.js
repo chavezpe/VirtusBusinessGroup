@@ -12,6 +12,7 @@ document.querySelector('.contact-form-contact').addEventListener('submit', async
         const response = await fetch('https://api.github.com/repos/chavezpe/VirtusBusinessGroup/dispatches', {
             method: 'POST',
             headers: {
+                'Authorization': `Bearer ${GT_TOKEN}`, // Set this in GitHub Secrets, don't hardcode
                 'Accept': 'application/vnd.github.everest-preview+json',
                 'Content-Type': 'application/json'
             },
