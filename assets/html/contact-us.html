@@ -42,22 +42,26 @@
     <h1>Contact Us</h1>
     <p>Please complete this form to contact us for more information. We look forward to hearing from you. <span
             class="required-contact">All fields required.</span></p>
-    <form action="#" class="contact-form-contact" method="post">
+    <form
+            action="https://docs.google.com/forms/d/e/1FAIpQLSfiFU3WuLFi5yZBiRlpWUiVauHUnyi_Urpmbq-Pp5nMySO2NQ/formResponse"
+            method="POST"
+            target="hidden_iframe"
+            onsubmit="clearForm(event);">
         <div class="form-group-contact">
-            <label for="first-name"></label><input id="first-name" name="first-name" placeholder="FIRST NAME"
-                                                   required type="text">
-            <label for="last-name"></label><input id="last-name" name="last-name" placeholder="LAST NAME" required
-                                                  type="text">
+            <label for="first-name"></label><input name="entry.1739874249" id="first-name" placeholder="FIRST NAME" required type="text">
+            <label for="last-name"></label><input name="entry.1424935423" id="last-name" placeholder="LAST NAME" required type="text">
         </div>
 
         <div class="form-group-contact">
-            <label for="email"></label><input id="email" name="email" placeholder="EMAIL" required type="email">
+            <label for="email"></label><input name="entry.1937514698" id="email" placeholder="EMAIL" required type="email">
         </div>
 
         <div class="form-group-contact">
-            <label for="message"></label><textarea id="message" name="message" placeholder="MESSAGE"
-                                                   required></textarea>
+            <label for="message"></label><textarea name="entry.988095972" id="message" placeholder="MESSAGE" required></textarea>
         </div>
+
+        <!-- Invisible iframe for handling form submission without redirecting the user -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
 
         <button type="submit">Submit</button>
     </form>
@@ -65,6 +69,8 @@
     <!-- Link to the JavaScript file -->
     <script src="../js/form-handler.js"></script>
 </main>
+
+
 
 
 </body>
