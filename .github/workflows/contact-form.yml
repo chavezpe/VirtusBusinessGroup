@@ -30,4 +30,4 @@ jobs:
           git commit -m "Add new form submission"
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GT_TOKEN }}
+          GT_TOKEN: ${{ secrets.GT_TOKEN }}
