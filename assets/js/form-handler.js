@@ -1,3 +1,6 @@
+import process
+    from "../../../../../../Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/matplotlib/backends/web_backend/.eslintrc";
+
 document.querySelector('.contact-form-contact').addEventListener('submit', async (event) => {
     event.preventDefault(); // Prevent default form submission
 
@@ -9,6 +12,7 @@ document.querySelector('.contact-form-contact').addEventListener('submit', async
     };
 
     try {
+        let GT_TOKEN = process.env.GT_TOKEN; // Set this in GitHub Secrets, don't hardcode
         const response = await fetch('https://api.github.com/repos/chavezpe/VirtusBusinessGroup/dispatches', {
             method: 'POST',
             headers: {
