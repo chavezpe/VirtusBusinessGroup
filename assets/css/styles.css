@@ -333,7 +333,11 @@ CONTACT BOX
     .nav-links {
         flex-direction: column !important; /* Stack links vertically */
         align-items: center !important;
-
+        list-style: none !important;
+        display: flex !important;
+        flex: 1 !important; /* Allow the nav links to take available space */
+        justify-content: center !important; /* Center nav items */
+        margin: 0 !important; /* Remove margin to center links */
     }
 
     header {
