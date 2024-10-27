@@ -6,12 +6,12 @@
 .profile-container {
     display: flex; /* Use flexbox layout */
     padding: 5%; /* Padding around the container */
+    flex-wrap: wrap; /* Allow wrapping of columns */
 }
 
 /* Column Styles */
 .column {
     padding: 10px; /* Padding within each column */
-    /*border: 1px solid #ccc; !* Border around each column *!*/
     border-radius: 5px; /* Optional: rounded corners */
 }
 
@@ -33,7 +33,6 @@
     margin-bottom: 10px; /* Add space between elements */
 }
 
-
 /* Right Column */
 .right-column-teams {
     width: 70%; /* Set right column width */
@@ -41,9 +40,52 @@
 
 /* Image Styles */
 #profile-image {
-    max-width: 100%; /* Ensure the image doesn't exceed the column width */
+    max-width: 100%; /* Ensure image is responsive */
     height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image fits within the container */
+    object-fit: cover; /* Cover the area without distortion */
     margin-bottom: 10px; /* Space below the image */
 }
 
+/* Base text styles */
+h1, h3, h4, h5, p, a {
+    font-size: 1em; /* Set default base size */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Stack columns vertically on mobile */
+        align-items: center; /* Center align items */
+        padding: 2%; /* Reduce padding for mobile */
+    }
+
+    .left-column-teams, .right-column-teams {
+        width: 100%; /* Full width for mobile */
+    }
+
+    #profile-image {
+        width: 80%; /* Adjust for mobile viewing */
+    }
+
+    /* Reduce font sizes on smaller screens */
+    h1 {
+        font-size: 1.5em; /* Smaller heading for main title */
+    }
+
+    h3 {
+        font-size: 1.2em; /* Slightly smaller subheadings */
+    }
+
+    h4, h5 {
+        font-size: 1em; /* Smaller for smaller headings */
+    }
+
+    p, a {
+        font-size: 0.9em; /* Smaller paragraph text and links */
+    }
+
+    /* Optional: Add more specific adjustments as needed */
+    #profile-name-header, #profile-title, #profile-email, #profile-bio {
+        font-size: 0.9em; /* Further adjust individual elements if needed */
+    }
+}
