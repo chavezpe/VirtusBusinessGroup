@@ -300,7 +300,7 @@ CONTACT BOX
     }
 
     .logo img {
-        width: 60px !important; /* Reduce logo size */
+        width: 70px !important; /* Reduce logo size */
     }
 
     /* Navigation Bar Styling */
@@ -320,7 +320,7 @@ CONTACT BOX
     }
 
     .nav-links a {
-        font-size: 10px !important; /* Smaller font size for navigation links */
+        font-size: 12px !important; /* Smaller font size for navigation links */
         padding: 2px 3px !important; /* Adjust padding */
         margin: 0 2px; /* Add some space between links */
     }
@@ -331,11 +331,18 @@ CONTACT BOX
     }
 
     .email-button a {
-        font-size: 8px !important; /* Smaller font size for contact button */
+        font-size: 10px !important; /* Smaller font size for contact button */
         padding: 3px 6px !important; /* Adjust padding */
     }
 
     header {
         padding: 5px !important; /* Reduce padding in header */
+    }
+
+    /* Main content area */
+    main {
+      flex: 1; /* Allow the main content area to grow */
+      margin-top: 70px;
+
     }
 }
