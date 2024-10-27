@@ -311,6 +311,12 @@ CONTACT BOX
         padding: 3px 6px !important; /* Adjust padding */
     }
 
+    /* Adjust the contact button for mobile */
+    .email-button a {
+        right: 10px; /* Closer to the right corner */
+        top: 10px; /* Keep it near the top */
+    }
+
     /* Optional: Stack nav links vertically on very small screens */
     .nav-links {
         flex-direction: column !important; /* Stack links vertically */
