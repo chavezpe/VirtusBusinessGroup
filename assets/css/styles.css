@@ -299,6 +299,14 @@ CONTACT BOX
         width: 60px !important; /* Reduce logo size */
     }
 
+    /* Navigation Bar Styling */
+    nav {
+        display: flex;
+        justify-content: center; /* Center nav items on mobile */
+        align-items: center;
+        padding: 5px; /* Adjust padding if needed */
+    }
+
     /* Navigation Links */
     .nav-links a {
         font-size: 12px !important; /* Smaller font size for navigation links */
@@ -312,9 +320,8 @@ CONTACT BOX
     }
 
     /* Adjust the contact button for mobile */
-    .email-button a {
-        right: 2px !important; /* Closer to the right corner */
-        top: 2px !important; /* Keep it near the top */
+    .email-button {
+        margin-left: auto; /* Keep it right-aligned */
     }
 
     /* Optional: Stack nav links vertically on very small screens */

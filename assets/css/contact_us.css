@@ -76,26 +76,26 @@ a:hover {
 /* Responsive Styles */
 @media (max-width: 768px) {
     main {
-        width: 90%; /* Increase width for smaller screens */
-        padding: 10px; /* Reduce padding */
+        width: 90% !important; /* Increase width for smaller screens */
+        padding: 10px !important; /* Reduce padding */
     }
 
     h1 {
-        font-size: 1.5em; /* Smaller heading size */
+        font-size: 1.5em !important; /* Smaller heading size */
     }
 
     p {
-        font-size: 0.9em; /* Smaller paragraph size */
+        font-size: 0.9em !important; /* Smaller paragraph size */
     }
 
     .form-group-contact {
-        flex-direction: column; /* Stack inputs vertically */
-        gap: 10px; /* Reduce gap between inputs */
+        flex-direction: column !important; /* Stack inputs vertically */
+        gap: 10px !important; /* Reduce gap between inputs */
     }
 
     button[type="submit"] {
-        width: 100%; /* Make button full-width */
-        padding: 15px; /* Increase padding for better touch targets */
-        font-size: 1em; /* Maintain button font size */
+        width: 100% !important; /* Make button full-width */
+        padding: 15px !important; /* Increase padding for better touch targets */
+        font-size: 1em !important; /* Maintain button font size */
     }
 }
