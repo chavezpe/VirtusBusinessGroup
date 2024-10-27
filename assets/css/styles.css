@@ -313,8 +313,8 @@ CONTACT BOX
 
     /* Adjust the contact button for mobile */
     .email-button a {
-        right: 10px; /* Closer to the right corner */
-        top: 10px; /* Keep it near the top */
+        right: 2px; /* Closer to the right corner */
+        top: 2px; /* Keep it near the top */
     }
 
     /* Optional: Stack nav links vertically on very small screens */
