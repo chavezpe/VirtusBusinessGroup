@@ -291,3 +291,38 @@ CONTACT BOX
     background-color: #f9f9f9; /* Light background color */
     margin: 20px 0; /* Space above and below */
 }
+
+/* Responsive Header Styles */
+@media (max-width: 768px) {
+    /* Logo */
+    .logo img {
+        width: 70px; /* Reduce logo size */
+    }
+
+    /* Navigation Links */
+    .nav-links a {
+        font-size: 14px; /* Smaller font size for navigation links */
+        padding: 5px 8px; /* Adjust padding */
+    }
+
+    /* Contact Button */
+    .email-button a {
+        font-size: 10px; /* Smaller font size for contact button */
+        padding: 4px 8px; /* Adjust padding */
+    }
+
+    /* Optional: Stack nav links vertically on very small screens */
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+    }
+
+    /* Optional: Adjust padding and layout */
+    nav {
+        padding: 8px;
+    }
+
+    header {
+        padding: 5px; /* Reduce padding in header */
+    }
+}
