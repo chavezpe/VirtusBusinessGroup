@@ -299,6 +299,11 @@ CONTACT BOX
         width: 60px !important; /* Reduce logo size */
     }
 
+    /* Logo */
+    .logo {
+        margin-right: auto !important; /* Allow space between the logo and the nav links */
+    }
+
     /* Navigation Bar Styling */
     nav {
         display: flex;
@@ -328,11 +333,6 @@ CONTACT BOX
     .nav-links {
         flex-direction: column !important; /* Stack links vertically */
         align-items: center !important;
-    }
-
-    /* Adjust padding and layout */
-    nav {
-        padding: 5px !important;
     }
 
     header {
