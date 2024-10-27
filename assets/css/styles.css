@@ -296,33 +296,33 @@ CONTACT BOX
 @media (max-width: 768px) {
     /* Logo */
     .logo img {
-        width: 70px; /* Reduce logo size */
+        width: 60px !important; /* Reduce logo size */
     }
 
     /* Navigation Links */
     .nav-links a {
-        font-size: 14px; /* Smaller font size for navigation links */
-        padding: 5px 8px; /* Adjust padding */
+        font-size: 12px !important; /* Smaller font size for navigation links */
+        padding: 4px 6px !important; /* Adjust padding */
     }
 
     /* Contact Button */
     .email-button a {
-        font-size: 10px; /* Smaller font size for contact button */
-        padding: 4px 8px; /* Adjust padding */
+        font-size: 10px !important; /* Smaller font size for contact button */
+        padding: 3px 6px !important; /* Adjust padding */
     }
 
     /* Optional: Stack nav links vertically on very small screens */
     .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        align-items: center;
+        flex-direction: column !important; /* Stack links vertically */
+        align-items: center !important;
     }
 
-    /* Optional: Adjust padding and layout */
+    /* Adjust padding and layout */
     nav {
-        padding: 8px;
+        padding: 5px !important;
     }
 
     header {
-        padding: 5px; /* Reduce padding in header */
+        padding: 5px !important; /* Reduce padding in header */
     }
 }
