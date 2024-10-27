@@ -320,9 +320,9 @@ CONTACT BOX
     }
 
     .nav-links a {
-        font-size: 12px !important; /* Smaller font size for navigation links */
-        padding: 4px 6px !important; /* Adjust padding */
-        margin: 0 10px; /* Add some space between links */
+        font-size: 10px !important; /* Smaller font size for navigation links */
+        padding: 2px 3px !important; /* Adjust padding */
+        margin: 0 5px; /* Add some space between links */
     }
 
     /* Contact Button */
@@ -331,7 +331,7 @@ CONTACT BOX
     }
 
     .email-button a {
-        font-size: 10px !important; /* Smaller font size for contact button */
+        font-size: 8px !important; /* Smaller font size for contact button */
         padding: 3px 6px !important; /* Adjust padding */
     }
 
