@@ -295,49 +295,44 @@ CONTACT BOX
 /* Responsive Header Styles */
 @media (max-width: 768px) {
     /* Logo */
-    .logo img {
-        width: 60px !important; /* Reduce logo size */
-    }
-
-    /* Logo */
     .logo {
         margin-right: auto !important; /* Allow space between the logo and the nav links */
+    }
+
+    .logo img {
+        width: 60px !important; /* Reduce logo size */
     }
 
     /* Navigation Bar Styling */
     nav {
         display: flex !important;
-        /*justify-content: flex-start !important; !* Align items to the left *!*/
         align-items: center !important;
         padding: 5px; /* Adjust padding if needed */
     }
 
     /* Navigation Links */
+    .nav-links {
+        list-style: none !important;
+        display: flex !important;
+        flex: 1; /* Allow the nav links to take available space */
+        justify-content: center !important; /* Center nav items */
+        margin: 0 !important; /* Remove margin to center links */
+    }
+
     .nav-links a {
         font-size: 12px !important; /* Smaller font size for navigation links */
         padding: 4px 6px !important; /* Adjust padding */
+        margin: 0 10px; /* Add some space between links */
     }
 
     /* Contact Button */
+    .email-button {
+        margin-left: auto !important; /* Keep it right-aligned */
+    }
+
     .email-button a {
         font-size: 10px !important; /* Smaller font size for contact button */
         padding: 3px 6px !important; /* Adjust padding */
-    }
-
-    /* Adjust the contact button for mobile */
-    .email-button {
-        margin-left: auto; /* Keep it right-aligned */
-    }
-
-    /* Optional: Stack nav links vertically on very small screens */
-    .nav-links {
-        flex-direction: column !important; /* Stack links vertically */
-        align-items: center !important;
-        list-style: none !important;
-        display: flex !important;
-        flex: 1 !important; /* Allow the nav links to take available space */
-        justify-content: center !important; /* Center nav items */
-        margin: 0 !important; /* Remove margin to center links */
     }
 
     header {
