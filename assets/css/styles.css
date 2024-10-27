@@ -307,7 +307,8 @@ CONTACT BOX
     /* Navigation Bar Styling */
     nav {
         display: flex;
-        justify-content: center; /* Center nav items on mobile */
+        justify-content: flex-start; /* Align items to the left */
+        flex: 1; /* Allow nav to grow */
         align-items: center;
         padding: 5px; /* Adjust padding if needed */
     }
