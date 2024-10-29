@@ -251,30 +251,74 @@ footer {
     Team Cards
 */
 
+.pro-titles {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.team-container {
+    display: flex;                     /* Use flexbox for horizontal alignment */
+    flex-direction: row;              /* Align cards in a row */
+    justify-content: center;          /* Center cards horizontally */
+    flex-wrap: nowrap;                /* Prevent cards from wrapping to the next line */
+    overflow-x: auto;                 /* Allow horizontal scrolling if needed */
+    gap: 20px;                        /* Space between cards */
+    padding-left: 20px;               /* Optional: add padding around the container */
+    padding-right: 20px;              /* Optional: add padding around the container */
+    margin-top: 5px;                 /* Add space above the container */
+
+}
+
 .team-card {
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 250px;
-  height: 350px;
-  text-align: center;
-  margin: 10px;
-  display: inline-block;
+    width: 250px; /* Adjust width as needed */
+    height: 350px; /* Adjust height as needed */
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* Image within each Team Card */
 .team-card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures images fit without distortion */
+    margin: 0 auto 15px;
 }
 
+/* Team Title */
+.team-container h1 {
+    margin-bottom: 20px; /* Adjust this value for desired space */
+    text-align: center;   /* Center the title */
+}
+
+/* Team Member Name */
 .team-card h2 {
-  font-size: 20px;
-  margin: 10px 0;
+    font-size: 1.25rem;
+    margin: 10px 0;
 }
 
+/* Team Member Title */
 .team-card p {
-  font-size: 16px;
-  color: #666;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* View Profile Link */
+.team-card a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto;
 }
 
 /*
@@ -344,5 +388,19 @@ CONTACT BOX
       flex: 1; /* Allow the main content area to grow */
       margin-top: 70px;
 
+    }
+
+    .team-container {
+        flex-wrap: wrap;              /* Allow wrapping on smaller screens */
+        justify-content: space-between; /* Space out cards when wrapping */
+    }
+    .team-card {
+        width: calc(50% - 10px);     /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-card {
+        width: calc(100% - 10px);    /* One card per row on small screens */
     }
 }

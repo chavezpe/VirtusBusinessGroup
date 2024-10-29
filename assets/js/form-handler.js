@@ -11,6 +11,7 @@ function clearForm(event) {
             document.getElementById("last-name").value = "";
             document.getElementById("email").value = "";
             document.getElementById("message").value = "";
+            document.getElementById("phone").value = "";
             alert("Your message has been sent!");
         }, 500); // Delay to ensure form submission completes
     }
