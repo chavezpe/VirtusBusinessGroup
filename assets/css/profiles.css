@@ -5,13 +5,13 @@
 /* Profile Container Styles */
 .profile-container {
     display: flex; /* Use flexbox layout */
-    padding: 5%; /* Padding around the container */
+    padding: 3%; /* Padding around the container */
     flex-wrap: wrap; /* Allow wrapping of columns */
 }
 
 /* Column Styles */
 .column {
-    padding: 10px; /* Padding within each column */
+    padding: 5px; /* Padding within each column */
     border-radius: 5px; /* Optional: rounded corners */
 }
 
@@ -49,6 +49,12 @@
 /* Base text styles */
 h1, h3, h4, h5, p, a {
     font-size: 1em; /* Set default base size */
+}
+
+/* Header Styles */
+#profile-name-header {
+    font-size: 1.5em; /* Larger font size for main title */
+    padding-left: 5%; /* Add padding around the header */
 }
 
 /* Mobile Styles */

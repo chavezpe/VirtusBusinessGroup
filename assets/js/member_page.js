@@ -20,9 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function populateProfile(member) {
         document.getElementById('profile-image').src = member.image;
         document.getElementById('profile-name-header').textContent = member.name;
+        document.getElementById('profile-name-page').textContent = member.name;
         document.getElementById('profile-name').textContent = member.name;
         document.getElementById('profile-title').textContent = member.title;
-        document.getElementById('profile-email').textContent = member.email;
+        // document.getElementById('profile-email').textContent = member.email;
         document.getElementById('profile-bio').innerHTML = member.bio.replace(/\n/g, "<br>");
         const linkedinElement = document.getElementById('profile-linkedin');
         linkedinElement.href = member.linkedin; // Set the LinkedIn URL from the member data
