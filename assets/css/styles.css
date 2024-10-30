@@ -112,9 +112,69 @@ nav {
 
 /* Main content area */
 main {
-  flex: 1; /* Allow the main content area to grow */
-  margin-top: 100px;
+    flex: 1; /* Allow the main content area to grow */
+    margin-top: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
 
+}
+
+/* Content Blocks Layout */
+.content-block {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.content-block .text {
+    flex: 1;
+    padding: 1rem;
+}
+
+.content-block .image {
+    flex: 1;
+    padding: 1rem;
+}
+
+.content-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.content-block:nth-child(even) .text {
+    order: 2;
+}
+
+.content-block:nth-child(even) .image {
+    order: 1;
+}
+
+.content-block h2 {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    margin-top: 10px; /* Adds space between the paragraph and button */
+}
+
+.button-link {
+    display: inline-block; /* Makes the link behave like a button */
+    padding: 10px 20px; /* Adds space around the text */
+    background-color: #ffffff; /* Button color */
+    color: rgb(139, 98, 58); /* Text color */
+    border: none; /* Removes default link styling */
+    border-radius: 4px; /* Rounds the corners */
+    text-decoration: none; /* Removes underline from the link */
+    font-weight: bold; /* Makes the text bold */
+    transition: background-color 0.3s; /* Adds a smooth hover effect */
+}
+
+.button-link:hover {
+    background-color: rgba(54, 54, 54, 0.17); /* Darkens the button on hover */
 }
 
 /* Body Styling */
@@ -239,11 +299,13 @@ footer {
 }
 
 .footer-logo img {
-    margin-right: 10px; /* Space between logo and name */
+    margin-right: 1px; /* Space between logo and name */
+    margin-bottom: 0; /* Space below the logo */
+    margin-left: 1px; /* Space to the left of the logo */
 }
 
 .footer p {
-    margin: 5px 0; /* Space between paragraphs */
+    margin: 2px 0; /* Space between paragraphs */
 }
 
 
@@ -315,7 +377,7 @@ footer {
 
 /* View Profile Link */
 .team-card a {
-    color: #007BFF;
+    color: rgb(139, 98, 58);
     text-decoration: none;
     font-weight: bold;
     margin-top: auto;
@@ -396,6 +458,14 @@ CONTACT BOX
     }
     .team-card {
         width: calc(50% - 10px);     /* Two cards per row on medium screens */
+    }
+
+    .content-block {
+        flex-direction: column;
+    }
+
+    .content-block .image, .content-block .text {
+        order: initial;
     }
 }
 
