@@ -45,6 +45,24 @@ header.visible {
   height: auto;
 }
 
+/* Business Name Styling */
+.business-name {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 45px; /* Adjust to control vertical placement */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.business-name h1 {
+    font-size: 24px;
+    color: #8b623a; /* Adjust color as needed */
+    font-family: 'Montserrat', sans-serif; /* Change to desired font */
+    font-weight: bold;
+    margin: 0;
+}
+
 /* Navigation Bar Styling */
 nav {
   display: flex;
@@ -400,6 +418,11 @@ CONTACT BOX
 
 /* Responsive Header Styles */
 @media (max-width: 768px) {
+    /* Center the Business Name */
+    .business-name {
+        top: 5px !important; /* Adjust positioning for smaller screens */
+        font-size: 18px; /* Adjust font size as needed */
+    }
     /* Logo */
     .logo {
         margin-right: auto !important; /* Allow space between the logo and the nav links */
@@ -470,6 +493,11 @@ CONTACT BOX
 }
 
 @media (max-width: 480px) {
+    /* Business Name */
+    .business-name {
+        font-size: 16px; /* Smaller font size for very small screens */
+        top: 5px;
+    }
     .team-card {
         width: calc(100% - 10px);    /* One card per row on small screens */
     }
