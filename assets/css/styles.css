@@ -504,6 +504,11 @@ CONTACT BOX
     .business-name h1 {
         font-size: 16px !important; /* Adjust font size as needed */
     }
+    .nav-links a {
+        font-size: 10px !important; /* Smaller font size for navigation links */
+        padding: 2px 3px !important; /* Adjust padding */
+        margin: 0 2px; /* Add some space between links */
+    }
     .team-card {
         width: calc(100% - 10px) !important;    /* One card per row on small screens */
     }
