@@ -421,8 +421,12 @@ CONTACT BOX
     /* Center the Business Name */
     .business-name {
         top: 5px !important; /* Adjust positioning for smaller screens */
-        font-size: 10px !important; /* Adjust font size as needed */
     }
+
+    .business-name h1 {
+        font-size: 18px !important; /* Adjust font size as needed */
+    }
+
     /* Logo */
     .logo {
         margin-right: auto !important; /* Allow space between the logo and the nav links */
@@ -449,7 +453,7 @@ CONTACT BOX
     }
 
     .nav-links a {
-        font-size: 10px !important; /* Smaller font size for navigation links */
+        font-size: 12px !important; /* Smaller font size for navigation links */
         padding: 2px 3px !important; /* Adjust padding */
         margin: 0 2px; /* Add some space between links */
     }
@@ -495,8 +499,10 @@ CONTACT BOX
 @media (max-width: 480px) {
     /* Business Name */
     .business-name {
-        font-size: 8px !important; /* Smaller font size for very small screens */
         top: 3px !important; /* Adjust positioning for smaller screens */
+    }
+    .business-name h1 {
+        font-size: 16px !important; /* Adjust font size as needed */
     }
     .team-card {
         width: calc(100% - 10px) !important;    /* One card per row on small screens */
