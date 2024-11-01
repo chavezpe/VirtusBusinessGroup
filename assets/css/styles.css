@@ -421,7 +421,7 @@ CONTACT BOX
     /* Center the Business Name */
     .business-name {
         top: 5px !important; /* Adjust positioning for smaller screens */
-        font-size: 18px; /* Adjust font size as needed */
+        font-size: 14px !important; /* Adjust font size as needed */
     }
     /* Logo */
     .logo {
@@ -449,7 +449,7 @@ CONTACT BOX
     }
 
     .nav-links a {
-        font-size: 12px !important; /* Smaller font size for navigation links */
+        font-size: 10px !important; /* Smaller font size for navigation links */
         padding: 2px 3px !important; /* Adjust padding */
         margin: 0 2px; /* Add some space between links */
     }
@@ -480,7 +480,7 @@ CONTACT BOX
         justify-content: space-between; /* Space out cards when wrapping */
     }
     .team-card {
-        width: calc(50% - 10px);     /* Two cards per row on medium screens */
+        width: calc(50% - 10px) !important;     /* Two cards per row on medium screens */
     }
 
     .content-block {
@@ -495,10 +495,10 @@ CONTACT BOX
 @media (max-width: 480px) {
     /* Business Name */
     .business-name {
-        font-size: 16px; /* Smaller font size for very small screens */
-        top: 5px;
+        font-size: 12px !important; /* Smaller font size for very small screens */
+        top: 5px !important; /* Adjust positioning for smaller screens */
     }
     .team-card {
-        width: calc(100% - 10px);    /* One card per row on small screens */
+        width: calc(100% - 10px) !important;    /* One card per row on small screens */
     }
 }
