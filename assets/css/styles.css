@@ -421,7 +421,7 @@ CONTACT BOX
     /* Center the Business Name */
     .business-name {
         top: 5px !important; /* Adjust positioning for smaller screens */
-        font-size: 14px !important; /* Adjust font size as needed */
+        font-size: 12px !important; /* Adjust font size as needed */
     }
     /* Logo */
     .logo {
@@ -495,7 +495,7 @@ CONTACT BOX
 @media (max-width: 480px) {
     /* Business Name */
     .business-name {
-        font-size: 12px !important; /* Smaller font size for very small screens */
+        font-size: 10px !important; /* Smaller font size for very small screens */
         top: 5px !important; /* Adjust positioning for smaller screens */
     }
     .team-card {
