@@ -47,9 +47,10 @@ header.visible {
 
 /* Business Name Styling */
 .business-name {
-    text-align: center;
+    text-align: left;
     width: 100%;
     position: absolute;
+    padding-left: 120px;
     top: 45px; /* Adjust to control vertical placement */
     left: 50%;
     transform: translateX(-50%);
@@ -67,7 +68,7 @@ header.visible {
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding: 10px;
   background-color: #ffffff;
 }
@@ -108,17 +109,18 @@ nav {
 .email-button {
   position: absolute; /* Make it absolutely positioned */
   top: 10px; /* Align it near the top of the header */
-  right: 25px; /* Align it near the right edge */
+  right: 20px; /* Align it near the right edge */
 }
 
 .email-button a {
   /*background-color: #f6a623;*/
   color: rgb(139, 98, 58); /* Text color */
+    /*background-color: rgba(54, 54, 54, 0.17); !* Button color *!*/
   padding: 5px 10px;
   border-radius: 10px;
   text-decoration: none;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   display: inline-block;
 }
@@ -131,9 +133,9 @@ nav {
 /* Main content area */
 main {
     flex: 1; /* Allow the main content area to grow */
-    margin-top: 100px;
-    padding-left: 10%;
-    padding-right: 10%;
+    margin-top: 130px;
+    padding-left: 5%;
+    padding-right: 5%;
 
 }
 
@@ -193,45 +195,6 @@ main {
 
 .button-link:hover {
     background-color: rgba(54, 54, 54, 0.17); /* Darkens the button on hover */
-}
-
-/* Body Styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #ffffff;
-  padding: 0 20px;
-  margin-top: 150px;
-}
-
-
-/* Two-Column Layout Styling */
-.two-column-container {
-    display: flex;
-    height: 200px; /* Set the height of the container */
-    margin-top: 20px; /* Add space above the container */
-}
-
-.left-column {
-    flex: 1; /* Takes up equal space */
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-}
-
-.right-column {
-    flex: 1; /* Takes up equal space */
-    flex-direction: column;
-    padding: 10px; /* Add some padding around the text */
-    display: flex;
-    justify-content: center; /* Center the text horizontally */
-    align-items: center; /* Center the text vertically */
-}
-
-/* Responsive Image */
-.responsive-image {
-    max-width: 100%; /* Make sure image is responsive */
-    height: auto; /* Maintain aspect ratio */
 }
 
 /* Button Styling */
@@ -301,7 +264,7 @@ body {
 
 footer {
     background-color: #f1f1f1; /* Light gray background */
-    padding: 20px; /* Space around the content */
+    padding: 0; /* Space around the content */
     text-align: center; /* Center the text */
 }
 
@@ -324,6 +287,15 @@ footer {
 
 .footer p {
     margin: 2px 0; /* Space between paragraphs */
+    font-family: 'Montserrat', sans-serif; /* Change to desired font */
+    /*font-weight: bold;*/
+}
+
+.footer-content span {
+    font-size: 0.8em; /* Adjust font size */
+    color: #666; /* Light gray text color */
+    font-family: 'Montserrat', sans-serif; /* Change to desired font */
+    font-weight: bold;
 }
 
 
@@ -336,7 +308,7 @@ footer {
     font-size: 2em;
     font-weight: bold;
     color: #333;
-    margin-top: 20px;
+    margin-top: 150px;
     margin-bottom: 20px;
 }
 
@@ -420,7 +392,8 @@ CONTACT BOX
 @media (max-width: 768px) {
     /* Center the Business Name */
     .business-name {
-        top: 5px !important; /* Adjust positioning for smaller screens */
+        top: 35px !important; /* Adjust positioning for smaller screens */
+        /*position: absolute;*/
     }
 
     .business-name h1 {
@@ -439,7 +412,7 @@ CONTACT BOX
     /* Navigation Bar Styling */
     nav {
         display: flex !important;
-        align-items: center !important;
+        align-items: flex-end !important;
         padding: 5px; /* Adjust padding if needed */
     }
 
@@ -474,32 +447,56 @@ CONTACT BOX
 
     /* Main content area */
     main {
-      flex: 1; /* Allow the main content area to grow */
-      margin-top: 70px;
+      flex: 1 !important; /* Allow the main content area to grow */
+      margin-top: 100px!important
 
     }
 
     .team-container {
-        flex-wrap: wrap;              /* Allow wrapping on smaller screens */
-        justify-content: space-between; /* Space out cards when wrapping */
+        flex-wrap: wrap !important;              /* Allow wrapping on smaller screens */
+        justify-content: space-between !important; /* Space out cards when wrapping */
+        margin-top: 10px !important;              /* Add space above the container */
     }
     .team-card {
         width: calc(50% - 10px) !important;     /* Two cards per row on medium screens */
     }
 
     .content-block {
-        flex-direction: column;
+        flex-direction: column !important;
+    }
+
+    .content-block h2 {
+        font-size: 1em !important;
     }
 
     .content-block .image, .content-block .text {
         order: initial;
+    }
+    .footer-content {
+        flex-direction: column !important;
+    }
+    .footer-content p {
+        margin: 5px 0 !important;
+    }
+    .footer-content span {
+        margin: 5px 0 !important;
+
+    }
+    .pro-titles {
+    text-align: center !important;
+    font-size: 2em !important;
+    font-weight: bold !important;
+    color: #333 !important;
+    margin-top: 110px !important;
+    margin-bottom: 5px !important;
     }
 }
 
 @media (max-width: 480px) {
     /* Business Name */
     .business-name {
-        top: 3px !important; /* Adjust positioning for smaller screens */
+        top: 35px !important; /* Adjust positioning for smaller screens */
+        padding-left: 90px;
     }
     .business-name h1 {
         font-size: 16px !important; /* Adjust font size as needed */
@@ -509,9 +506,15 @@ CONTACT BOX
         padding: 2px 3px !important; /* Adjust padding */
         margin: 0 2px; /* Add some space between links */
     }
-        .email-button a {
+    .email-button a {
         font-size: 10px !important; /* Smaller font size for contact button */
         padding: 0 !important; /* Adjust padding */
+    }
+    .content-block h2 {
+        font-size: 1em;
+    }
+    .content-block p {
+        font-size: 0.8em;
     }
     .team-card {
         width: calc(100% - 10px) !important;    /* One card per row on small screens */

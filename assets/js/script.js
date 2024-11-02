@@ -1,29 +1,3 @@
-// Select relevant elements
-const openFormButton = document.getElementById('openForm');
-const closeModalButton = document.getElementById('closeModal');
-const interestForm = document.getElementById('interestForm');
-
-// Open modal when button is clicked (This part is for the modal)
-openFormButton.addEventListener('click', function() {
-    if (interestForm.style.display === 'none' || interestForm.style.display === '') {
-        interestForm.style.display = 'block'; // Show the form
-    } else {
-        interestForm.style.display = 'none'; // Hide the form
-    }
-});
-
-// Close modal when close button is clicked
-closeModalButton.addEventListener('click', function() {
-    interestForm.style.display = 'none'; // Hide the modal
-});
-
-// Close modal when clicking outside of modal content
-window.addEventListener('click', function(event) {
-    if (event.target === interestForm) {
-        interestForm.style.display = 'none'; // Hide the modal
-    }
-});
-
 // Variables to track the scroll position
 let lastScrollTop = 0;
 const header = document.querySelector('header');
