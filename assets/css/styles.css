@@ -465,7 +465,7 @@ CONTACT BOX
 
     .email-button a {
         font-size: 10px !important; /* Smaller font size for contact button */
-        padding: 3px 6px !important; /* Adjust padding */
+        padding: 1px 1px !important; /* Adjust padding */
     }
 
     header {
@@ -508,6 +508,10 @@ CONTACT BOX
         font-size: 10px !important; /* Smaller font size for navigation links */
         padding: 2px 3px !important; /* Adjust padding */
         margin: 0 2px; /* Add some space between links */
+    }
+        .email-button a {
+        font-size: 10px !important; /* Smaller font size for contact button */
+        padding: 0 !important; /* Adjust padding */
     }
     .team-card {
         width: calc(100% - 10px) !important;    /* One card per row on small screens */
