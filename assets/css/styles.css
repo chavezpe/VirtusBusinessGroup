@@ -298,6 +298,15 @@ footer {
     font-weight: bold;
 }
 
+.footer-links {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    /*margin-top: 10px; !* Space above the links *!*/
+    padding: 10px; /* Space around the links */
+    margin: 0 30px; /* Add space between each link */
+
+}
+
 
 /*
     Team Cards
