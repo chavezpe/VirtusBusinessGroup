@@ -1,0 +1,44 @@
+footer {
+    background-color: #f1f1f1; /* Light gray background */
+    padding: 0; /* Space around the content */
+    text-align: center; /* Center the text */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center; /* Center logo and text vertically */
+}
+
+.footer-logo img {
+    margin-right: 1px; /* Space between logo and name */
+    margin-bottom: 0; /* Space below the logo */
+    margin-left: 1px; /* Space to the left of the logo */
+}
+
+.footer p {
+    margin: 2px 0; /* Space between paragraphs */
+    font-family: 'Lato', sans-serif; /* Change to desired font */
+    /*font-weight: bold;*/
+}
+
+.footer-content span {
+    font-size: 0.8em; /* Adjust font size */
+    color: #666; /* Light gray text color */
+    font-family: 'Lato', sans-serif; /* Change to desired font */
+    font-weight: bold;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    /*margin-top: 10px; !* Space above the links *!*/
+    padding: 10px; /* Space around the links */
+    margin: 0 30px; /* Add space between each link */
+
+}

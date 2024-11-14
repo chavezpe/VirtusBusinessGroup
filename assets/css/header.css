@@ -52,7 +52,7 @@ nav {
 /* Media query for tablets (768px and below) */
 @media (max-width: 768px) {
     header {
-        padding: 15px !important;
+        padding: 15px
     }
 
     /* Reduce gap between links */

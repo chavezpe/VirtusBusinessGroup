@@ -190,166 +190,8 @@ main {
 
 }
 
-/* Content Blocks Layout */
-.content-block {
-    display: flex;
-    align-items: center;
-    margin: 2rem 0;
-}
-
-.content-block .text {
-    flex: 1;
-    padding: 1rem;
-}
-
-.content-block .image {
-    flex: 1;
-    padding: 1rem;
-}
-
-.content-block img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.content-block:nth-child(even) .text {
-    order: 2;
-}
-
-.content-block:nth-child(even) .image {
-    order: 1;
-}
-
-.content-block h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.content-block p {
-    font-size: 1.25em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.button-container {
-    margin-top: 10px; /* Adds space between the paragraph and button */
-}
-
-.button-link {
-    display: inline-block; /* Makes the link behave like a button */
-    padding: 10px 20px; /* Adds space around the text */
-    background-color: #ffffff; /* Button color */
-    color: rgb(139, 98, 58); /* Text color */
-    border: none; /* Removes default link styling */
-    border-radius: 4px; /* Rounds the corners */
-    text-decoration: none; /* Removes underline from the link */
-    font-weight: bold; /* Makes the text bold */
-    transition: background-color 0.3s; /* Adds a smooth hover effect */
-}
-
-.button-link:hover {
-    background-color: rgba(54, 54, 54, 0.17); /* Darkens the button on hover */
-}
-
-/* Button Styling */
-.styled-button {
-    background-color: rgba(139, 98, 58); /* Background color */
-    color: white; /* Text color */
-    border: none; /* No border */
-    border-radius: 5px; /* Optional: rounded corners */
-    padding: 10px 20px; /* Space around the text */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Font size */
-    transition: background-color 0.3s; /* Smooth background color change on hover */
-}
-
-.styled-button:hover {
-    background-color: rgb(54, 54, 54); /* Change background color on hover */
-}
 
 
-/* Modal Content */
-.modal-content {
-  background-image: url('../images/logo.png'); /* Add your background image */
-  background-size: cover; /* Cover the entire modal */
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 2% auto; /* Centered */
-  padding: 20px;
-  border: 1px solid #888; /* Remove border */
-  border-radius: 10px; /* Optional: add border radius for rounded corners */
-  width: 90%; /* Width can vary based on screen size */
-  height: 90%; /* Height will adjust based on content */
-  overflow: hidden; /* Enable scroll if needed */
-  display: flex; /* Use flexbox to center content */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-}
-
-/* Close Button */
-.close {
-   color: #aaa;
-   float: right;
-   font-size: 28px;
-   font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-   color: black;
-   text-decoration: none;
-   cursor: pointer;
-}
-
-
-footer {
-    background-color: #f1f1f1; /* Light gray background */
-    padding: 0; /* Space around the content */
-    text-align: center; /* Center the text */
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center; /* Center logo and text vertically */
-}
-
-.footer-logo img {
-    margin-right: 1px; /* Space between logo and name */
-    margin-bottom: 0; /* Space below the logo */
-    margin-left: 1px; /* Space to the left of the logo */
-}
-
-.footer p {
-    margin: 2px 0; /* Space between paragraphs */
-    font-family: 'Lato', sans-serif; /* Change to desired font */
-    /*font-weight: bold;*/
-}
-
-.footer-content span {
-    font-size: 0.8em; /* Adjust font size */
-    color: #666; /* Light gray text color */
-    font-family: 'Lato', sans-serif; /* Change to desired font */
-    font-weight: bold;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center; /* Center the links horizontally */
-    /*margin-top: 10px; !* Space above the links *!*/
-    padding: 10px; /* Space around the links */
-    margin: 0 30px; /* Add space between each link */
-
-}
 
 
 /*
@@ -437,18 +279,6 @@ footer {
     .team-card {
         width: calc(50% - 10px) !important;     /* Two cards per row on medium screens */
     }
-
-    .content-block {
-        flex-direction: column !important;
-    }
-
-    .content-block h2 {
-        font-size: 1em !important;
-    }
-
-    .content-block .image, .content-block .text {
-        order: initial;
-    }
     .footer-content {
         flex-direction: column !important;
     }
@@ -485,16 +315,10 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .content-block h2 {
-        font-size: 1em;
-    }
-    .content-block p {
-        font-size: 0.8em;
-    }
     .team-card {
         width: calc(100% - 10px) !important;    /* One card per row on small screens */
     }
-        #services h2, #solutions h3 {
+    #services h2, #solutions h3 {
         font-size: 1.5rem; /* Smaller font size for titles */
     }
 
