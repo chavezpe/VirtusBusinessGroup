@@ -1,0 +1,91 @@
+header {
+    background-color: #fff;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-left {
+    margin-right: 2%;
+    margin-left: auto;
+}
+
+.nav-right {
+    margin-left: 2%;
+    margin-right: auto;
+}
+
+.nav-left a, .nav-right a {
+    text-decoration: none;
+    color: rgb(9, 19, 35);
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    padding: 3px 3px 3px 3px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    background-color: rgba(153, 101, 21, 0.17); /* Slightly darker on hover */
+    padding: 3px 3px;
+}
+
+/* Logo Styling */
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+
+/* Media query for tablets (768px and below) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px !important;
+    }
+
+    /* Reduce gap between links */
+    .nav-left, .nav-right {
+        gap: 15px !important;
+    }
+
+    /* Adjust font size for links */
+    .nav-left a, .nav-right a {
+        font-size: 16px !important;
+        padding: 2px 2px !important;
+    }
+
+    /* Slightly smaller logo */
+    .logo img {
+        width: 80px !important;
+    }
+}
+
+/* Media query for phones (480px and below) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    /* Smaller font size and padding for links */
+    .nav-left a, .nav-right a {
+        font-size: 14px;
+        padding: 2px 2px;
+    }
+
+    /* Smaller logo for phones */
+    .logo img {
+        width: 60px;
+    }
+}

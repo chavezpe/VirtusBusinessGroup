@@ -4,9 +4,10 @@
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/header.css">
     <link rel="icon" href="assets/images/logo.png" type="image/png">
     <title>Virtus Business Group | Business Solutions for Businesses</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <meta name="description" content="Virtus Business Group provides tailored business solutions, including Website
     Development, SEO, Branding, and Advertising for small businesses seeking digital growth." />
         <script type="application/ld+json">
@@ -29,98 +30,131 @@
 <body>
 
     <!-- Header Section -->
+    <section id="hero">
     <header>
         <nav>
-            <!-- Business Name -->
-            <div class="business-name">
-                <h1>Virtus Business Group</h1>
-            </div>
 
-            <!-- Logo -->
+            <ul class="nav-left">
+
+                <li><a href=#hero>Home</a></li>
+                <li><a href="#services">Our Services</a></li>
+
+            </ul>
+
             <div class="logo">
+
                 <a href="index.html">
                     <img src="assets/images/logo.png" alt="Virtus Business Group">
                 </a>
+
             </div>
 
+            <ul class="nav-right">
 
-            <!-- Navigation Tabs -->
-            <div class="nav-container">
-                <ul class="nav-links">
-                    <li><a href="index.html">About Us</a></li>
-                    <li><a href="assets/html/services.html">Our Services</a></li>
-                    <li><a href="assets/html/team.html">Our Team</a></li>
-<!--                    <li><a href="assets/html/careers.html">Careers</a></li>-->
-                </ul>
-            </div>
+                <li><a href="assets/html/team.html">Our Team</a></li>
+                <li><a href="assets/html/contact-us.html">Contact Us</a></li>
 
-            <!-- Call Button -->
-            <div class="email-button">
-                <a href="assets/html/contact-us.html">Contact Us</a>
-            </div>
+            </ul>
+
         </nav>
     </header>
+    <div class="hero-content">
+        <h1>Connecting small businesses to the rest of the world</h1>
+            <a href="assets/html/contact-us.html">
+                <button class="cta-button">Contact Now</button>
+            </a>
+    </div>
+    </section>
 
     <!-- Main Content -->
 
-    <main>
-        <!-- Content Block 1 -->
-        <section class="content-block">
-            <div class="text">
-                <h2 class="info">Virtus Business Group offers a wide range of tailored business solutions designed to
-                    help small businesses thrive in today's digital world.
-                    Our services encompass Website Development, SEO & Maintenance, Branding & Identity, and Paid
-                    Advertising Management.</h2>
-                <p>We are dedicated to empowering our clients with innovative strategies that foster growth and improve
-                    their online presence.
-                    Our team consists of graduates in Business, Data Science, and Economics, bringing a diverse skill
-                    set and fresh perspectives to every project.</p>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-box-1">
+                <h3>01</h3>
+                <p>Website Development</p>
+                <img src="assets/images/desktop_windows.png" alt="We Offer Website Development">
             </div>
-            <div class="image">
-                <img src="assets/images/p1.jpg" alt="Virtus Business Group providing website development services for
-                small businesses">
+            <div class="service-box-2">
+                <h3>02</h3>
+                <p>SEO & Maintenance</p>
+                <img src="assets/images/folder_managed.png" alt="We Offer SEO & Maintenance">
             </div>
-        </section>
+            <div class="service-box-1">
+                <h3>03</h3>
+                <p>Branding & Identity</p>
+                <img src="assets/images/brand_awareness.png" alt="We Offer Branding & Identity">
+            </div>
+            <div class="service-box-2">
+                <h3>04</h3>
+                <p>Advertising Management</p>
+                <img src="assets/images/monitoring.png" alt="We Offer Advertising Management">
+            </div>
+        </div>
+    </section>
 
-        <!-- Content Block 2 -->
-        <section class="content-block">
-            <div class="image">
-                <img src="assets/images/p2.png" alt="Data analysis and digital strategies by Virtus Business Group">
-            </div>
-            <div class="text">
-                <h2 class="info">At Virtus Business Group, we believe in combining insightful, innovative thinking with
-                    rigorous analysis to address the unique challenges faced by businesses.</h2>
-                <p>Our clients rely on our creativity and commitment to achieving exceptional results. We don’t just
-                    deliver data; we interpret it to reveal actionable insights. Understanding the story behind the
-                    numbers is essential for our clients, and our mission is to uncover these narratives through
-                    economic principles and business insights, ensuring our analyses are both clear and impactful.
-                </p>
-                <div class="button-container">
-                    <a href="/assets/html/services.html" class="button-link">Explore our Business Solutions →</a>
+    <section id="solutions">
+    <div class="solutions-container">
+        <!-- Solutions Column on Left Side -->
+        <div class="solutions-list">
+
+            <h3>How we can help you!</h3>
+            <p>Click below to see how Virtus Business Group can serve you.</p>
+
+            <div class="solution">
+                <div class="solution-header" onclick="toggleSolution('solution1')">
+                    <span>Website Development</span>
+                    <button class="toggle-button">+</button>
+                </div>
+                <div id="solution1" class="solution-content">
+                    <p>We create high-performing, visually engaging websites tailored to your brand and audience. Our
+                        development process ensures that your website is user-friendly, responsive, and optimized for the
+                        best online experience.</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Content Block 3 -->
-        <section class="content-block">
-            <div class="text">
-                <h2 class="info">Our team of skilled professionals at Virtus Business Group excels in transforming
-                    complex data into meaningful and actionable information.</h2>
-                <p>We prioritize exceptional client service and strive to provide creative solutions tailored to our
-                    clients' specific needs. With expertise across various industries and a commitment to excellence, we
-                    are well-equipped to guide our clients through the intricacies of digital growth, ensuring they have
-                    the tools and strategies needed to succeed.
-                </p>
-                <div class="button-container">
-                    <a href="assets/html/team.html" class="button-link">View our professionals →</a>
+            <div class="solution">
+                <div class="solution-header" onclick="toggleSolution('solution2')">
+                    <span>SEO & Maintenance</span>
+                    <button class="toggle-button">+</button>
+                </div>
+                <div id="solution2" class="solution-content">
+                    <p>Optimize your online presence with our comprehensive SEO services, and keep your website running
+                        smoothly with regular updates and maintenance. We help your business rank higher in search results
+                        and provide ongoing support to ensure optimal performance.</p>
                 </div>
             </div>
-            <div class="image">
-                <img src="assets/images/p3.png" alt="Virtus Business Group team of professionals offering business
-                solutions">
+
+            <div class="solution">
+                <div class="solution-header" onclick="toggleSolution('solution3')">
+                    <span>Branding & Identity</span>
+                    <button class="toggle-button">+</button>
+                </div>
+                <div id="solution3" class="solution-content">
+                    <p>Establish a unique and memorable brand identity with our branding services. From logo design to
+                        brand messaging, we help you create a cohesive, impactful brand that resonates with your target
+                        audience.</p>
+                </div>
             </div>
-        </section>
-    </main>
+
+            <div class="solution">
+                <div class="solution-header" onclick="toggleSolution('solution4')">
+                    <span>Advertising Management</span>
+                    <button class="toggle-button">+</button>
+                </div>
+                <div id="solution4" class="solution-content">
+                    <p>Maximize your reach and impact with strategic advertising management. We handle your campaigns
+                        across various platforms, optimizing for results and ensuring that your brand reaches the right
+                        audience at the right time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
 
 
 
@@ -133,8 +167,8 @@
             </div>
             <p>Virtus Business Group specializes in empowering businesses with Website Development, SEO, Branding, and Advertising solutions.</p>
             <div class="footer-links">
-                <a href="index.html">About Us</a> |
-                <a href="assets/html/services.html">Services</a> |
+                <a href="#hero">Home</a> |
+                <a href="#services">Services</a> |
                 <a href="assets/html/team.html">Our Team</a> |
                 <a href="assets/html/contact-us.html">Contact Us</a>
             </div>
@@ -142,7 +176,7 @@
     </footer>
 
     <!-- Include JavaScript -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/solutions.js"></script>
 
 
 
