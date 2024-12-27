@@ -1,6 +1,11 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 header {
     background-color: #fff;
-    padding: 20px;
 }
 
 nav {
@@ -12,17 +17,17 @@ nav {
 
 .nav-left, .nav-right {
     display: flex;
-    gap: 20px;
+    gap: 2vw; /* Use viewport width for spacing between items */
     list-style: none;
 }
 
 .nav-left {
-    margin-right: 2%;
+    margin-right: 2vw; /* Responsive margin */
     margin-left: auto;
 }
 
 .nav-right {
-    margin-left: 2%;
+    margin-left: 2vw; /* Responsive margin */
     margin-right: auto;
 }
 
@@ -30,10 +35,10 @@ nav {
     text-decoration: none;
     color: rgb(9, 19, 35);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125rem; /* Use rem for font size (18px equivalent) */
     font-family: 'Playfair Display', serif;
-    padding: 3px 3px 3px 3px;
-    border-radius: 8px;
+    padding: 0.5em 0.5em; /* Use em for padding */
+    border-radius: 0.5em; /* Use em for consistent scaling */
     transition: background-color 0.3s;
     text-align: center;
     display: block; /* Ensures links take full width of their container */
@@ -41,53 +46,45 @@ nav {
 
 .nav-left a:hover, .nav-right a:hover {
     background-color: rgba(153, 101, 21, 0.17); /* Slightly darker on hover */
-    padding: 3px 3px;
+    padding: 0.5em 0.5em; /* Consistent padding */
 }
 
 /* Logo Styling */
 .logo img {
-  width: 100px;
-  height: auto;
+    width: 10vw; /* Responsive width for logo */
+    height: auto; /* Maintain aspect ratio */
 }
 
+/* Responsive Adjustments */
 
-/* Media query for tablets (768px and below) */
+/* Tablet */
 @media (max-width: 768px) {
-    header {
-        padding: 15px
-    }
-
-    /* Reduce gap between links */
     .nav-left, .nav-right {
-        gap: 15px !important;
+        gap: 1.5vw; /* Reduce gap on smaller screens */
     }
 
-    /* Adjust font size for links */
     .nav-left a, .nav-right a {
-        font-size: 16px !important;
-        padding: 2px 2px !important;
+        font-size: 1rem; /* Slightly smaller font size */
+        padding: 0.4em 0.4em; /* Adjust padding */
     }
 
-    /* Slightly smaller logo */
     .logo img {
-        width: 80px !important;
+        width: 15vw; /* Adjust logo size */
     }
 }
 
-/* Media query for phones (480px and below) */
+/* Mobile */
 @media (max-width: 480px) {
     header {
-        padding: 10px;
+        padding: 5vh; /* Increase padding for smaller screens */
     }
 
-    /* Smaller font size and padding for links */
     .nav-left a, .nav-right a {
-        font-size: 14px;
-        padding: 2px 2px;
+        font-size: 0.9rem; /* Smaller font size for compact screens */
+        padding: 0.5em 0.8em; /* Adjust padding for touch areas */
     }
 
-    /* Smaller logo for phones */
     .logo img {
-        width: 60px;
+        width: 20vw; /* Adjust logo size further */
     }
 }

@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Title */
+.pro-titles {
+    text-align: center;
+    font-size: 2rem; /* Relative font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2vh; /* Vertical spacing */
+}
+
+/* Team Container */
+.team-container {
+    display: flex;                     /* Use flexbox for layout */
+    flex-direction: row;              /* Align cards in a row */
+    justify-content: center;          /* Center cards horizontally */
+    flex-wrap: nowrap;                /* Prevent wrapping by default */
+    overflow-x: auto;                 /* Enable horizontal scrolling */
+    gap: 2vw;                         /* Space between cards */
+    padding: 0 2vw;                   /* Add horizontal padding */
+    margin-top: 1vh;                  /* Add space above the container */
+}
+
+/* Individual Team Card */
+.team-card {
+    width: 15rem; /* Responsive card width */
+    height: 22rem; /* Responsive card height */
+    background-color: rgba(238, 234, 224);
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center;
+    padding: 1rem; /* Inner padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Image within each Team Card */
+.team-card img {
+    width: 6rem; /* Responsive image size */
+    height: 6rem; /* Maintain aspect ratio */
+    border-radius: 50%;
+    object-fit: cover; /* Ensure no distortion */
+    margin: 0 auto 1rem; /* Center image and add space below */
+}
+
+/* Team Title */
+.team-container h1 {
+    margin-bottom: 2vh; /* Adjust space below the title */
+    text-align: center; /* Center-align the title */
+}
+
+/* Team Member Name */
+.team-card h2 {
+    font-size: 1.25rem; /* Adjustable font size */
+    margin: 0.5rem 0; /* Vertical spacing */
+}
+
+/* Team Member Title */
+.team-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* View Profile Link */
+.team-card a {
+    color: rgb(139, 98, 58);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+/* Responsive Adjustments */
+
+/* Tablet View (768px and below) */
+@media (max-width: 768px) {
+    .team-container {
+        flex-wrap: wrap; /* Allow wrapping of cards */
+        justify-content: center; /* Center-align wrapped cards */
+        gap: 3vw; /* Increase gap between cards */
+    }
+
+    .team-card {
+        width: 40vw; /* Adjust card width */
+        height: 20rem; /* Make the card taller */
+        padding: 1.5rem; /* Increase padding for readability */
+    }
+
+    .team-card img {
+        width: 5rem; /* Adjust image size */
+        height: 5rem;
+    }
+
+    .team-card h2 {
+        font-size: 1.2rem; /* Slightly smaller font size */
+    }
+
+    .team-card p {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}
+
+/* Mobile View (480px and below) */
+@media (max-width: 480px) {
+    .team-container {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 2vh; /* Add vertical spacing between cards */
+    }
+
+    .team-card {
+        width: 90%; /* Use most of the screen width */
+        height: 15rem; /* Make the card taller */
+        margin: 0 auto; /* Center the card */
+        padding: 1rem; /* Reduce padding slightly */
+    }
+
+    .team-card img {
+        width: 4rem; /* Smaller image size */
+        height: 4rem;
+    }
+
+    .team-card h2 {
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    .team-card p {
+        font-size: 0.85rem; /* Adjust text size */
+    }
+}

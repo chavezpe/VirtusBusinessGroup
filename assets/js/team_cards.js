@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Load and parse CSV
-  Papa.parse('../data/team.csv', {
+  Papa.parse('../assets/data/team.csv', {
     download: true,
     header: true,
     complete: function (results) {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="${member.image}" alt="${member.name}">
         <h2>${member.name}</h2>
         <p>${member.title}</p>
-        <a href="team-member-profile.html?name=${encodeURIComponent(member.name)}">View Profile</a>
+        <a href="../team-member/index.html?name=${encodeURIComponent(member.name)}">View Profile</a>
       `;
       teamContainer.appendChild(card);
     });

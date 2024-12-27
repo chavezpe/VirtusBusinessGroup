@@ -5,20 +5,20 @@
 /* Profile Container Styles */
 .profile-container {
     display: flex; /* Use flexbox layout */
-    padding: 3%; /* Padding around the container */
-    flex-wrap: wrap; /* Allow wrapping of columns */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 2vw; /* Responsive padding */
 }
 
 /* Column Styles */
 .column {
-    padding: 5px; /* Padding within each column */
-    border-radius: 5px; /* Optional: rounded corners */
+    padding: 0.5vw; /* Use viewport width for padding */
+    border-radius: 0.5vw; /* Rounded corners using relative units */
 }
 
 /* Left Column */
 .left-column-teams {
-    width: 20%; /* Set left column width */
-    display: flex; /* Ensure content is vertically stacked */
+    flex: 1 1 25%; /* Default: 25% width with flexibility */
+    display: flex;
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center children horizontally */
 }
@@ -30,12 +30,12 @@
     width: 100%; /* Ensure the text takes up full width of the column */
     text-align: center; /* Center the text inside the column */
     word-wrap: break-word; /* Ensure long words break to fit within the column */
-    margin-bottom: 10px; /* Add space between elements */
+    margin-bottom: 1vh; /* Add responsive spacing between elements */
 }
 
 /* Right Column */
 .right-column-teams {
-    width: 70%; /* Set right column width */
+    flex: 1 1 70%; /* Default: 70% width with flexibility */
 }
 
 /* Image Styles */
@@ -43,55 +43,78 @@
     max-width: 100%; /* Ensure image is responsive */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Cover the area without distortion */
-    margin-bottom: 10px; /* Space below the image */
+    margin-bottom: 1vh; /* Space below the image */
 }
 
 /* Base text styles */
 h1, h3, h4, h5, p, a {
-    font-size: 1em; /* Set default base size */
+    font-size: 1rem; /* Use rem for base font size */
 }
 
 /* Header Styles */
 #profile-name-header {
-    font-size: 1.5em; /* Larger font size for main title */
-    padding-left: 5%; /* Add padding around the header */
+    padding-top: 10vh; /* Add space above the header */
+    font-size: 1.5rem; /* Larger font size for main title */
+    padding-left: 5vw; /* Add responsive padding */
 }
 
-/* Mobile Styles */
+/* Responsive Adjustments */
+
+/* Tablet */
 @media (max-width: 768px) {
     .profile-container {
-        flex-direction: column; /* Stack columns vertically on mobile */
-        align-items: center; /* Center align items */
-        padding: 2%; /* Reduce padding for mobile */
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center-align content */
+    }
+
+    .left-column-teams {
+        width: 25vw; /* Increase column width for smaller screens */
+    }
+
+    .right-column-teams {
+        width: 65vw; /* Adjust right column width accordingly */
+    }
+
+    #profile-name-header {
+        font-size: 1.4rem; /* Slightly reduce header size */
+        padding-left: 4vw; /* Adjust padding */
+        text-align: center; /* Center-align header */
+    }
+
+    .left-column-teams h3,
+    .left-column-teams h4,
+    .left-column-teams p {
+        font-size: 0.9rem; /* Reduce font size */
+        margin-bottom: 1vh; /* Maintain spacing */
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .profile-container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center-align content */
     }
 
     .left-column-teams, .right-column-teams {
-        width: 100%; /* Full width for mobile */
+        width: 90%; /* Use full width for both columns */
+    }
+
+    #profile-name-header {
+        font-size: 1.2rem; /* Reduce header font size */
+        padding-left: 0; /* Remove left padding */
+        text-align: center; /* Center-align header */
+    }
+
+    .left-column-teams h3,
+    .left-column-teams h4,
+    .left-column-teams p {
+        font-size: 0.85rem; /* Further reduce font size */
+        margin-bottom: 1.5vh; /* Maintain spacing */
     }
 
     #profile-image {
-        width: 80%; /* Adjust for mobile viewing */
-    }
-
-    /* Reduce font sizes on smaller screens */
-    h1 {
-        font-size: 1.5em; /* Smaller heading for main title */
-    }
-
-    h3 {
-        font-size: 1.2em; /* Slightly smaller subheadings */
-    }
-
-    h4, h5 {
-        font-size: 1em; /* Smaller for smaller headings */
-    }
-
-    p, a {
-        font-size: 0.9em; /* Smaller paragraph text and links */
-    }
-
-    /* Optional: Add more specific adjustments as needed */
-    #profile-name-header, #profile-title, #profile-email, #profile-bio {
-        font-size: 0.9em; /* Further adjust individual elements if needed */
+        width: 50%; /* Scale image size for smaller screens */
+        margin-bottom: 2vh; /* Increase space below image */
     }
 }

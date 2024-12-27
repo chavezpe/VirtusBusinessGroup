@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Load and parse CSV
-    Papa.parse('../data/team.csv', {
+    Papa.parse('../assets/data/team.csv', {
         download: true,
         header: true,
         complete: function (results) {

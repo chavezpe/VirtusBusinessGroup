@@ -1,6 +1,6 @@
 footer {
     background-color: #f1f1f1; /* Light gray background */
-    padding: 0; /* Space around the content */
+    padding: 2vh 0; /* Use viewport height for padding */
     text-align: center; /* Center the text */
 }
 
@@ -16,29 +16,68 @@ footer {
 }
 
 .footer-logo img {
-    margin-right: 1px; /* Space between logo and name */
-    margin-bottom: 0; /* Space below the logo */
-    margin-left: 1px; /* Space to the left of the logo */
+    margin: 0 0.5vw; /* Responsive spacing around the logo */
+    width: 8vw; /* Responsive width for the logo */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .footer p {
-    margin: 2px 0; /* Space between paragraphs */
-    font-family: 'Lato', sans-serif; /* Change to desired font */
-    /*font-weight: bold;*/
+    margin: 0.5vh 0; /* Vertical spacing between paragraphs */
+    font-family: 'Lato', sans-serif; /* Desired font */
+    font-size: 1rem; /* Use rem for font size */
 }
 
 .footer-content span {
-    font-size: 0.8em; /* Adjust font size */
+    font-size: 0.8rem; /* Use rem for responsive font size */
     color: #666; /* Light gray text color */
-    font-family: 'Lato', sans-serif; /* Change to desired font */
+    font-family: 'Lato', sans-serif; /* Desired font */
     font-weight: bold;
 }
 
 .footer-links {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
     justify-content: center; /* Center the links horizontally */
-    /*margin-top: 10px; !* Space above the links *!*/
-    padding: 10px; /* Space around the links */
-    margin: 0 30px; /* Add space between each link */
+    padding: 1vh 0; /* Vertical padding around the links */
+    gap: 2vw; /* Use gap for spacing between links */
+}
 
+/* Responsive Adjustments */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .footer-logo img {
+        width: 12vw; /* Slightly larger logo for tablets */
+    }
+
+    .footer p {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .footer-content span {
+        font-size: 0.75rem; /* Adjust span font size */
+    }
+
+    .footer-links {
+        gap: 3vw; /* Increase gap between links */
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .footer-logo img {
+        width: 15vw; /* Larger logo for smaller screens */
+    }
+
+    .footer p {
+        font-size: 0.85rem; /* Smaller font size for compact screens */
+    }
+
+    .footer-content span {
+        font-size: 0.7rem; /* Smaller span font size */
+    }
+
+    .footer-links {
+        gap: 1vh; /* Vertical spacing for links */
+    }
 }
